@@ -1,16 +1,13 @@
 FROM python:3.11-slim
 
-# Install uv
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
-
 # Set working directory
 WORKDIR /app
 
 # Copy dependency files
-COPY pyproject.toml uv.lock* ./
+COPY pyproject.toml ./
 
-# Install dependencies using uv
-RUN uv sync --frozen
+# Install dependencies using pip
+RUN pip install --no-cache-dir -e .
 
 # Copy application code
 COPY . .
@@ -19,4 +16,4 @@ COPY . .
 EXPOSE 8086
 
 # Run the application
-CMD ["uv", "run", "python", "adventure_engine.py"]
+CMD ["python", "adventure_engine.py"]
