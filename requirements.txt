@@ -1,0 +1,17 @@
+# Core MCP library for building the server
+mcp
+
+# For running our web server (ASGI)
+uvicorn
+
+# For loading our secret keys from the.env file
+python-dotenv
+
+# OpenAI's Python library for accessing GPT and DALL-E
+google-generativeai
+
+# For handling image data
+Pillow
+
+# A modern HTTP client library, required by many AI libraries
+httpx
