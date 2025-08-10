@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: adventure-engine
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: AUTH_TOKEN
+        sync: false
+      - key: MY_NUMBER
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
