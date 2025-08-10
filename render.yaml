@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: puch_ai_mcp
+    name: adventure-engine
     env: docker
     dockerfilePath: ./Dockerfile
     plan: free
